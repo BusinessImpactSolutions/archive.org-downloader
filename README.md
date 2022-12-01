@@ -1,10 +1,10 @@
 # Archive.org Downloader 
 
-    Perl Downloader  
+    **Archive.org eBook/PDF Downloader**  
 
 ## Download files from Archive.org 
 
-	Downoad all files from a particular book from archive.org
+	Downoad all files of a particular book from archive.org written in Perl
 
 ## Requirements 
 
@@ -28,12 +28,34 @@
 
 ## Usage 
 
-	root@ns21:/mnt/c/Users/sumu/public/a/archive.org/download# 
-		./downloader.pl RelativeDownloadUrl RelativeSave2Dir FileName 
-		./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
-		./downloader.pl Url Dir file.txt
+	Open WSL Ubuntu on Windows 10/11 and cd to App Directory. E.g., `/mnt/c/Users/USER/a/archive.org/download#`
+    
+        ./downloader.pl Url Dir file.txt
+
+        Example:
+
+	    ./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
+	
 
 ## Documentation
 
     Alternatively, you can also do `perldoc ./download.pl` from a WSL Ubuntu command line on Windows 10/11
+
+    For documentation of Perl installation, 
+    
+        see https://github.com/bislink/PCAccessFree
+
+## Explanation of some technical words/phrases
+
+### App Directory
+
+    Location of folder/directory where download.pl resides
+
+### Destination Directory
+
+    Location of folder/directory where you want book files from archive.org to be saved
+
+## Related App
+
+    https://github.com/bislink/PCAccessFree
 
