@@ -5,7 +5,9 @@
 
 =head2 Usage 
 	root@ns21:/mnt/c/Users/sumu/public/a/archive.org/download# 
-		./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file
+		./downloader.pl RelativeDownloadUrl RelativeSave2Dir FileName 
+		./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
+		./downloader.pl Url Dir file.txt
 
 =cut
 
@@ -23,26 +25,31 @@ my $pipe_separated_file = $ARGV[2];
 my $full_url = "$download_url_base/$download_url";
 my $full_save2dir = "$save2dir_base/$save2dir";
 
-print "Save to: $full_save2dir;\nDownload URL: $full_url;\nFiles List: $full_save2dir/$pipe_separated_file\n";
+print "Save to: $full_save2dir;\nDownload URL: $full_url;\nFiles List: $full_save2dir/$pipe_separated_file\n\n";
 
-=head2 nnn
-if ( -f './file.txt') {
-	if ( open (my $file, "$dir/file.txt") ) {
+=head2 Actual code 
+
+=cut
+
+
+if ( -f "$full_save2dir/$pipe_separated_file") {
+	if ( open (my $file, "$full_save2dir/$pipe_separated_file") ) {
 		while ( my $line = <$file> ) {
 			#print "$line\n"; 
 			next if $line =~ /^$/;
 			#next if $line =~/^constitution$/i;
 			my ($name, $the_rest) = split(/\|/, $line, 2);
-			print "$name\n";
-			if (-f "$dir/$_") { 
+			print "Downloading $full_url\n";
+			if (-f "$full_save2dir/$name") { 
 				# donothing 
 			} else {
-				#`wget --tries 1 "$url/$name"`;
+				`wget --tries 1 "$full_url/$name" -P "$full_save2dir/$name"`;
+				print "\n";
 			}
 		}
 	}
 } else {
-print "File not found\n";
+	print "File not found $full_save2dir/$pipe_separated_file\n";
 }
 
 =cut
