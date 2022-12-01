@@ -1,4 +1,6 @@
 
 # https://github.com/BusinessImpactSolutions/archive.org-downloader
-git push -u origin origin
+# git@github.com:BusinessImpactSolutions/archive.org-downloader.git
+
+git push -u origin_ssh --all
 
