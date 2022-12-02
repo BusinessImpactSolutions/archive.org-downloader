@@ -35,10 +35,11 @@
     
         ./downloader.pl Url Dir file.txt
 
+        ./downloader.pl RelativeURL RelativeDir file.txt
+
         Example:
 
-	    ./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond \
-            h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
+	    ./downloader.pl India1934 i/india/in-1934 file.txt
 	
 
 ## Documentation
