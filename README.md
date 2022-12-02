@@ -1,6 +1,6 @@
 # Archive.org Downloader 
 
-    **Archive.org eBook/PDF Downloader**  
+    Archive.org eBook/PDF Downloader  
 
 ## Download files from Archive.org 
 
@@ -25,6 +25,8 @@
 				Paste into file.txt and save it in Destination Directory 
 			Replace all \t with | using VSCode, Notepad++, or notepad.
 			Save file into Destination Directory 
+
+        See 'file.txt'
 
 ## Usage 
 
