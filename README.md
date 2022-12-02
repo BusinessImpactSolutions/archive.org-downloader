@@ -30,20 +30,23 @@
 
 ## Usage 
 
-	Open WSL Ubuntu on Windows 10/11 and cd to App Directory. E.g., `/mnt/c/Users/USER/a/archive.org/download#`
+	Open WSL Ubuntu on Windows 10/11 and cd to App Directory. 
+        E.g., `/mnt/c/Users/USER/public/a/archive.org/download#`
     
         ./downloader.pl Url Dir file.txt
 
         Example:
 
-	    ./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
+	    ./downloader.pl UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond \
+            h/hinduism/caste-system/UnderstandingCaste-FromBuddhaToAmbedkarAndBeyond file.txt
 	
 
 ## Documentation
 
-    Alternatively, you can also do `perldoc ./download.pl` from a WSL Ubuntu command line on Windows 10/11
+    Alternatively, you can also do `perldoc ./download.pl` \
+        from a WSL Ubuntu command line on Windows 10/11
 
-    For documentation of Perl installation, 
+    For details/documentation on Perl installation, 
     
         see https://github.com/bislink/PCAccessFree
 
@@ -55,7 +58,8 @@
 
 ### Destination Directory
 
-    Location of folder/directory where you want book files from archive.org to be saved
+    Location of folder/directory where you want files of a book from archive.org to be saved \
+        which include files of type pdf, jpg, zip, xml, etc. 
 
 ## Related App
 
